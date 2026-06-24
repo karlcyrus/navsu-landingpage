@@ -2,7 +2,9 @@
 
 NAvSU is a real-time augmented reality navigation system designed to guide students, faculty, and visitors seamlessly across the campus. This repository contains the source code for the official NAvSU landing page.
 
-<img src="public/NAvSULogo.png" alt="NAvSU Logo" width="300" height="300" />
+<p align="center">
+  <img src="public/NAvSULogo.png" alt="NAvSU Logo" width="300" height="300" />
+</p>
 
 ##  Features
 - **Interactive Campus Map**: Built with MapLibre GL JS, featuring dynamic custom markers, clustered navigation points, and geo-boundaries.
