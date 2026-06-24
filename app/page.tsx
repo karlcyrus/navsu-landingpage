@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, FormEvent } from 'react';
 import CampusMap from './components/CampusMap';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,6 +14,14 @@ export default function Home() {
     setErrorMessage('');
 
     const formData = new FormData(e.currentTarget);
+    const hCaptchaResponse = formData.get("h-captcha-response");
+
+    if (!hCaptchaResponse) {
+      setIsSubmitting(false);
+      setErrorMessage("Please complete the captcha.");
+      return;
+    }
+
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "");
 
     try {
@@ -431,6 +440,11 @@ export default function Home() {
           <textarea className="form-textarea" id="fmessage" name="message" placeholder="Tell us what's on your mind…" required></textarea>
         </div>
         {errorMessage && <div className="form-error" style={{display: 'block', marginBottom: '1rem'}}>{errorMessage}</div>}
+        
+        <div style={{ marginBottom: '1rem' }}>
+          <HCaptcha sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" reCaptchaCompat={false} />
+        </div>
+
         <button className="form-submit" type="submit" disabled={isSubmitting} style={{ opacity: isSubmitting ? 0.7 : 1 }}>
           {isSubmitting ? 'Sending...' : 'Send Message'}
           {!isSubmitting && (
