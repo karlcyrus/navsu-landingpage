@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NAvSU - Campus AR Navigation Landing Page
 
-## Getting Started
+NAvSU is a real-time augmented reality navigation system designed to guide students, faculty, and visitors seamlessly across the campus. This repository contains the source code for the official NAvSU landing page.
 
-First, run the development server:
+![NAvSU Hero Section](public/NAvSULogo.png)
+
+## 🌟 Features
+- **Interactive Campus Map**: Built with MapLibre GL JS, featuring dynamic custom markers, clustered navigation points, and geo-boundaries.
+- **Modern UI/UX**: Designed with sleek, dark-mode aesthetics, custom micro-animations, and a dynamic interactive cursor glow.
+- **Fully Responsive**: Optimized for seamless viewing across desktops, tablets, and mobile devices.
+- **Working Contact Form**: Integrated with Web3Forms to securely route user inquiries directly to email without a backend server.
+- **SEO Optimized**: Built with Next.js 15 App Router for blazing-fast performance and optimal search engine indexing.
+
+## 🛠️ Tech Stack
+- **Framework**: Next.js (App Router)
+- **Library**: React 
+- **Mapping**: MapLibre GL JS & react-map-gl
+- **Forms**: Web3Forms API
+- **Styling**: Custom CSS Modules & Tailwind CSS v4
+
+## 🚀 Getting Started
+
+First, ensure you have Node.js installed. Then, clone the repository and install the dependencies:
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
